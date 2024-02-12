@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://postgresql:5432/lab4
+    password: 1234567
+    username: sleeter
+    driver-class-name: org.postgresql.Driver
+  liquibase:
+    enabled: true
+    change-log: classpath:db/changelog/db.changelog-master.xml
+
+jwt:
+  secret: 3RH7aHFDcWmpvtvAUhssAPSWheh87wWtu52HQvdlkDch7JkGrnKVsh9FJknroEC2
+  exp: 10 080 # week (set in minutes)
+
+confirmation:
+  url:
+    base: "http://localhost:8080"
+  expiration: 60 # hour
