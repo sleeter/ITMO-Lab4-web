@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import classes from './HitsTable.module.css'
 import {useDispatch, useSelector} from "react-redux";
 import Hit from "../hit/Hit";
-import {addHit, clearHits} from "../../../store/tokenSlice";
+import {addHit} from "../../../store/tokenSlice";
 import Service from "../../../API/Service";
 
 const HitsTable = () => {
