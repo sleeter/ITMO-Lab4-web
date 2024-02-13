@@ -30,7 +30,6 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Optional<User> createUser(User user) {
-        // todo вдруг такой юзер уже существует
         User newUser = userRepository.save(user);
         userRepository.flush();
         return Optional.of(newUser);

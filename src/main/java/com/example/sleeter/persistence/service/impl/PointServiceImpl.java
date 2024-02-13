@@ -26,7 +26,6 @@ public class PointServiceImpl implements PointService {
 
     @Override
     public List<PointDto> getUserPoints() {
-        // todo переписать на mapper
         return pointRepository.findPointsByUserId(getUserIdFromToken())
                 .stream()
                 .map(PointMapper::mapper)
@@ -35,7 +34,6 @@ public class PointServiceImpl implements PointService {
 
     @Override
     public List<PointDto> addPoint(DirtyPointDto dto) {
-        // todo ask как правильно реализовать этот момент
         long timer = System.nanoTime();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyy HH:mm:ss");
         ZonedDateTime moscowDateTime = ZonedDateTime.now(ZoneId.of("Europe/Moscow"));
